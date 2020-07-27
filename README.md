@@ -1,2 +1,2 @@
-# toggle-switch-basic-simulations
-Matlab scripts to run simulations of the toggle switch 
+# 2D - network - simulations
+Matlab scripts to run simulations of two dimensional networks
