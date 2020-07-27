@@ -1,2 +1,2 @@
-# 2D - network - simulations
-Matlab scripts to run simulations of two dimensional networks
+# Piecewise linear nonlinearities simulations for DSGRN.
+Matlab scripts to run Piecewise linear nonlinearities simulations for networks
