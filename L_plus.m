@@ -1,19 +1,19 @@
-function y = L_plus(x, L, delta, theta)
+function y = L_plus(x, L, delta, zeta)
 % Increasing linear ramp function, that is, defined by:
 % y = L,         if x <= theta1
 % y = L + delta, if x >= theta2
 % y = line from (theta1, L) to (theta2, L + delta), otherwise
 
 % Get theta1 and theta2
-theta1 = theta(1);
-theta2 = theta(2);
+zeta1 = zeta(1);
+zeta2 = zeta(2);
 
 % The varibale x could be a vector, so need to split the
 % vector into the parts x <= theta1, theta1 < x < theta2,
 % and x >= theta2 to compute the function y
-x1 = x(x <= theta1); % Get values x <= theta1
-x2 = x((x > theta1) & (x < theta2)); % Get values theta1 < x < theta2
-x3 = x(x >= theta2); % Get values x >= theta2
+x1 = x(x <= zeta1); % Get values x <= theta1
+x2 = x((x > zeta1) & (x < zeta2)); % Get values theta1 < x < theta2
+x3 = x(x >= zeta2); % Get values x >= theta2
 
 % Define the parts of the functions y1, y2, and y3
 
@@ -28,9 +28,9 @@ end
 if isempty(x2)
   y2 = []; % Empty if x2 is empty
 else
-  m = delta / (theta2 - theta1); % Slope
+  m = delta / (zeta2 - zeta1); % Slope
   % Line from (theta1, L) to (theta2, L + delta)
-  y2 = L + m * (x2 - theta1);
+  y2 = L + m * (x2 - zeta1);
 end
 
 % Define y = L + delta for x >= theta2
